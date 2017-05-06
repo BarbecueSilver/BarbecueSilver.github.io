@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etwas bloggen ...</title>
+    <link>https://barbecuesilver.github.io/index.xml</link>
+    <description>Recent content on Etwas bloggen ...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Sat, 06 May 2017 02:51:01 +0200</lastBuildDate>
+    <atom:link href="https://barbecuesilver.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Aller Anfang ist schwer!</title>
+      <link>https://barbecuesilver.github.io/post/aller-anfang-sei-schwer/</link>
+      <pubDate>Sat, 06 May 2017 02:51:01 +0200</pubDate>
+      
+      <guid>https://barbecuesilver.github.io/post/aller-anfang-sei-schwer/</guid>
+      <description>&lt;p&gt;Man sagt, dass aller Anfang schwer sei &amp;hellip; wenn man daran glaubt! Here we go.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://barbecuesilver.github.io/media/men.gif&#34; alt=&#34;Men&#34; title=&#34;Men&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
