@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>TypeScript</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=486458a7e6" />
+
+	<script>
+			var siteUrl = 'https://barbecuesilver.github.io';
+	</script>
+
+	<script>
+			var localTheme = localStorage.getItem('attila_theme');
+			switch (localTheme) {
+					case 'dark':
+							document.documentElement.classList.add('theme-dark');
+							break;
+					case 'light':
+							document.documentElement.classList.add('theme-light');
+							break;
+					default:
+							break;
+			}
+	</script>
+
+	<link rel="canonical" href="https://barbecuesilver.github.io/testing/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://barbecuesilver.github.io/testing/amp/" />
+    
+    <meta property="og:site_name" content="Open sea of code" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="TypeScript" />
+    <meta property="og:description" content="Or: C#, there and back again. I got in touch with C# during my time at university. In a team of four, we had several months to implement a collaborative drawing software for a tabletop touch screen. It was fun! My first bigger project. Next was station was a CAD" />
+    <meta property="og:url" content="https://barbecuesilver.github.io/testing/" />
+    <meta property="og:image" content="https://barbecuesilver.github.io/content/images/2021/09/photo1631735484.jpeg" />
+    <meta property="article:published_time" content="2021-09-15T21:53:58.000Z" />
+    <meta property="article:modified_time" content="2021-09-15T21:53:58.000Z" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TypeScript" />
+    <meta name="twitter:description" content="Or: C#, there and back again. I got in touch with C# during my time at university. In a team of four, we had several months to implement a collaborative drawing software for a tabletop touch screen. It was fun! My first bigger project. Next was station was a CAD" />
+    <meta name="twitter:url" content="https://barbecuesilver.github.io/testing/" />
+    <meta name="twitter:image" content="https://barbecuesilver.github.io/content/images/2021/09/photo1631735484.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Barbecue Silver" />
+    <meta property="og:image:width" content="960" />
+    <meta property="og:image:height" content="1280" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Open sea of code",
+        "url": "https://barbecuesilver.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://barbecuesilver.github.io/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Barbecue Silver",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://barbecuesilver.github.io/content/images/2021/09/avatar-1.jpg",
+            "width": 193,
+            "height": 193
+        },
+        "url": "https://barbecuesilver.github.io/author/barbecue/",
+        "sameAs": []
+    },
+    "headline": "TypeScript",
+    "url": "https://barbecuesilver.github.io/testing/",
+    "datePublished": "2021-09-15T21:53:58.000Z",
+    "dateModified": "2021-09-15T21:53:58.000Z",
+    "description": "Or: C#, there and back again.\n\nI got in touch with C# during my time at university. In a team of four, we had\nseveral months to implement a collaborative drawing software for a tabletop\ntouch screen. It was fun! My first bigger project.\n\nNext was station was a CAD company. They use C# as well. I was used to live in a\nuniverse of typed variables and method. It was comfortable. It saved me a lot of\ntime. I was not aware of this luxury, until ...\n\nI joined a company which offers several web applica",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://barbecuesilver.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.13" />
+    <link rel="alternate" type="application/rss+xml" title="Open sea of code" href="https://barbecuesilver.github.io/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.8.0/umd/portal.min.js" data-ghost="https://barbecuesilver.github.io/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #99c1f1;}</style>
+</head>
+
+<body class="post-template">
+
+	<div class="nav-header">
+		<nav class="nav-wrapper" aria-label="Main">
+				<ul>
+		<li class="nav-overview"><a href="https://barbecuesilver.github.io/"><span>Overview</span></a></li>
+		<li class="nav-about"><a href="https://barbecuesilver.github.io/about/"><span>About</span></a></li>
+</ul>
+
+				<ul class="nav-meta">
+  <li class="nav-search" style="display: none;">
+    <a title="Search">
+      <i class="icon icon-search" aria-hidden="true"></i>
+      <span>Search</span>
+    </a>
+  </li>
+  <!--
+    <li class="nav-subscribe">
+      <a href="#/portal">Subscribe</a>
+    </li>
+  -->
+</ul>
+		</nav>
+
+		<div class="nav-wrapper-control">
+			<div class="inner">
+				<a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>Menu</a>
+				<a class="nav-search" style="display: none;" title="Search" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav-close" role="button" aria-label="Close"></div>
+
+	<section class="page-wrapper">
+
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header class="post-header ">
+	<div class="inner">
+		<span class="post-info">
+			<span class="post-type">Article</span>
+		</span>
+		<h1 class="post-title">TypeScript</h1>
+		<div class="post-meta">
+			<div class="post-meta-avatars">
+					<figure class="post-meta-avatar avatar">
+						<a href="/author/barbecue/" class="author-avatar">
+								<img class="author-profile-image" src="/content/images/2021/09/avatar-1.jpg" alt="Barbecue Silver" />
+						</a>
+					</figure>
+			</div>
+			<h4 class="post-meta-author"><a href="/author/barbecue/">Barbecue Silver</a></h4>
+			<time datetime="15-09-2021">15 Sep 2021</time> &bull; 1 min read
+		</div>
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post no-image">
+		<div class="inner">
+
+			<section class="post-content">
+				<p>Or: C#, there and back again.</p><p>I got in touch with C# during my time at university. In a team of four, we had several months to implement a collaborative drawing software for a tabletop touch screen. It was fun! My first bigger project.</p><p>Next was station was a CAD company. They use C# as well. I was used to live in a universe of typed variables and method. It was comfortable. It saved me a lot of time. I was not aware of this luxury, until ...</p><p>I joined a company which offers several web applications: Welcome to the jungle! The relentless wilderness. Before I was walking on a warm and bright summers day in a beautiful city. Everything around me was crisp and crystal clear. Suddenly I was in a dark street at night. I didn't know what was around the next corner. There could be a mob, which is ready for everything, just another dark street, an open cozy restaurant or ... just nothingness ... you just fall. JavaScript.</p><p>At some time I got used to the darkness around me. My eyes go better in the dark. I knew when I needed to peek around the corner for nothingness. But still ... it was dark here. </p><p>The dawn has broken. There was light at the end of the tunnel. Everything began with three characters: <em>any</em>. C# was back again, but it had a different name: TypeScript.</p><p>Converting a project from JavaScript to TypeScript can be hard. The path may be brutal and exhausting. You discover bugs which you never thought of. They were there all the time. You never noticed.</p><p>I want to encourage you to take the learning curve. Try TS in a small project. You will love it. The "careless coding" of JS costs you much more than creating meaningful types in TS.</p><p>No more guessing.</p><p></p>
+			</section>
+
+			<section class="post-footer">
+
+				<div class="post-share">
+					<span class="post-info-label">Share</span>
+					<a title="Twitter" aria-label="Twitter" class="twitter" href="https://twitter.com/share?text=TypeScript&url=https://barbecuesilver.github.io/testing/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+						<i class="icon icon-twitter" aria-hidden="true"></i>
+					</a>
+					<a title="Facebook" aria-label="Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://barbecuesilver.github.io/testing/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+						<i class="icon icon-facebook" aria-hidden="true"></i>
+					</a>
+					<a title="LinkedIn" aria-label="LinkedIn" class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://barbecuesilver.github.io/testing//&amp;title=TypeScript" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
+						<i class="icon icon-linkedin" aria-hidden="true"></i>
+					</a>
+					<a title="Email" aria-label="Email" class="email" href="mailto:?subject=TypeScript&amp;body=https://barbecuesilver.github.io/testing/">
+						<i class="icon icon-mail" aria-hidden="true"></i>
+					</a>
+				</div>
+
+
+			</section>
+
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			   <div id="disqus_thread"></div>
+			</section>
+
+
+			<aside class="post-nav">
+
+
+				<div class="clear"></div>
+			</aside>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+
+		<div class="search-wrapper">
+			<div class="search">
+		    <form class="search-form">
+          <input class="search-field" type="text" placeholder="Search …">
+          <button class="search-button" type="submit">
+						<i class="icon icon-search" aria-hidden="true"></i>
+					</button>
+		    </form>
+				<div class="popular-wrapper">
+					<h4 class="popular-title">Topics</h4>
+					<span class="popular-tags post-tags">
+					</span>
+				</div>
+				<div class="search-result"></div>
+			</div>
+			<button class="search-wrapper-close" aria-label="Close"></button>
+		</div>
+
+		<div class="nav-footer">
+			<nav class="nav-wrapper" aria-label="Footer">
+				<span class="nav-credits"><a class="menu-item js-theme" href="#" data-system="System theme" data-dark="Dark theme" data-light="Light theme"><span class="theme-icon"></span><span class="theme-text">System theme</span> </a> </span>
+			</nav>
+		</div>
+
+	</section>
+
+	<script type="text/javascript" src="/assets/js/script.js?v=486458a7e6"></script>
+
+	<script>
+  $(document).ready(function () {
+		var viewport = $(window);
+		var post = $('.post-content');
+		// Responsive videos with fitVids
+    post.fitVids();
+		// Format code blocks and add line numbers
+		function codestyling() {
+	    $('pre code').each(function(i, e) {
+				// Code highlight
+	      hljs.highlightBlock(e);
+	      // No lines for plain text blocks
+	      if (!$(this).hasClass('language-text')) {
+	        var code = $(this);
+					// Calculate amount of lines
+	        var lines = code.html().split(/\n(?!$)/g).length;
+	        var numbers = [];
+	        if (lines > 1) {
+	          lines++;
+	        }
+	        for (i = 1; i < lines; i++) {
+	          numbers += '<span class="line" aria-hidden="true">' + i + '</span>';
+	        }
+	        code.parent().append('<div class="lines">' + numbers + '</div>');
+	      }
+	    });
+	  }
+	  codestyling();
+		// Reading progress bar on window top
+	  function readingProgress() {
+			var postBottom = post.offset().top + post.height();
+			var viewportHeight = viewport.height();
+      var progress = 100 - (((postBottom - (viewport.scrollTop() + viewportHeight) + viewportHeight / 3) / (postBottom - viewportHeight + viewportHeight / 3)) * 100);
+      $('.progress-bar').css('width', progress + '%');
+      (progress > 100) ? $('.progress-container').addClass('complete'): $('.progress-container').removeClass('complete');
+	  }
+	  readingProgress();
+		// Trigger reading progress
+	  viewport.on({
+	    'scroll': function() {
+	      readingProgress();
+	    },
+	    'resize': function() {
+	      readingProgress();
+	    },
+	    'orientationchange': function() {
+	      readingProgress();
+	    }
+	  });
+		// Check if disqus is defined by code injection
+		if (typeof disqus === 'undefined') {
+			// hide comment section
+	    $('.post-comments').css({
+	      'display': 'none'
+	    });
+	  } else {
+	    $('#show-disqus').on('click', function() {
+	      $.ajax({
+	        type: "GET",
+	        url: "//" + disqus + ".disqus.com/embed.js",
+	        dataType: "script",
+	        cache: true
+	      });
+	      $(this).parent().addClass('activated');
+	    });
+	  }
+  });
+</script>
+
+
+	
+
+</body>
+</html>
